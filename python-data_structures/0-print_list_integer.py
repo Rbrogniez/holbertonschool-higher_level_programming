@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def print_list_integer(my_list=[]):
-    print(*my_list, sep = "\n")
+    print("{}" .format('\n'.join(map(str,my_list[:]))))
