@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
 def multiple_returns(sentence):
-    lenA = len(sentence)
-    print(lenA,sentence[0])
+    length = (len(sentence))
+    first = (sentence[0])
+    return (length, first)
