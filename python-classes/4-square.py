@@ -22,7 +22,7 @@ class Square:
     def size(self, value):
         """setter size"""
         if type(value) is not int:
-            raise TypeError("size must be an integrer")
+            raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >=0")
         else:
