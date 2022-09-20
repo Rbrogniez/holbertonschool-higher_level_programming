@@ -15,10 +15,12 @@ class Square:
 
     @property
     def size(self):
+        "retrieve suze"
         return self.__size
 
     @size.setter
     def size(self, value):
+        """setter size"""
         if type(value) is not int:
             raise TypeError("size must be an integrer")
         elif value < 0:
@@ -27,4 +29,5 @@ class Square:
             self.__size = value
 
     def area(self):
-        return self.__size **2
+        """Square of area"""
+        return self.__size
