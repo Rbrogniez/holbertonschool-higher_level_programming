@@ -1,0 +1,42 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+	>>> add_integer(1, 2)
+	3
+
+	>>> add_integer(1)
+	99
+
+	>>> add_integer(3.14, 4)
+	7
+
+	>>> add_integer(7, 6.5)
+	13
+
+	>>> add_integer(4.793, 3.098)
+	7
+
+	>>> add_integer(-3)
+	95
+
+	>>> add_integer(4, -9)
+	-5
+
+	>>> add_integer(-4, -7)
+	-11
+
+	>>> add_integer(-3, 5.9)
+	2
+
+	>>> add_integer(3.5, -10)
+	-7
+
+	>>> add_integer(-4.9, -3.0)
+	-7
