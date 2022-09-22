@@ -1,1 +1,16 @@
 
+=============================
+The ``3-say_my_name`` module
+=============================
+
+Using ``say_my_name``
+---------------------
+
+Import the function:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now test it:
+
+   >>> say_my_name(Brogniez, Romain)
+   Brogniez Romain
