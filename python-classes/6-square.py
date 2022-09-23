@@ -9,7 +9,6 @@ class Square:
 
     """Square Class"""
 
-
     def __init__(self, size=0, position=(0, 0)):
         """Initialize"""
         if type(size) is not int:
@@ -58,7 +57,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
-            
+
     def my_print(self):
         if self.__size == 0:
             print()
@@ -71,5 +70,3 @@ class Square:
             for j in range(0, self.__size):
                 print("#", end="")
             print()
-
-
