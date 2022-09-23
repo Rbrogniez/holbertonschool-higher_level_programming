@@ -1,11 +1,11 @@
-======================
+=================================
 The ``5-text_indentation`` module
-======================
+=================================
 
 Using ``text_indentation``
 -------------------
 
-	>>> text_indentation = __import__('5-text_indentation').print_square
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Now use it:
 
