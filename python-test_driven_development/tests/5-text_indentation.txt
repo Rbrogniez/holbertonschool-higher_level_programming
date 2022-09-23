@@ -11,8 +11,8 @@ Import the function:
 
 Now test it:
 
-    >>> text_indentation("Hello.")
-    Hello.
+    >>> text_indentation("Holberton.")
+    Holberton.
     <BLANKLINE>
 
     >>> text_indentation("Hello. World: Here I am!")
@@ -30,10 +30,10 @@ Now test it:
     ?
     <BLANKLINE>
 
-    >>> text_indentation("Holberton")
-    Holberton
+    >>> text_indentation("Holberton School")
+    Holberton School
 
-    >>> text_indentation(9)
+    >>> text_indentation(12)
     Traceback (most recent call last):
     TypeError: text must be a string
 
