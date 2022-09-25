@@ -1,73 +1,26 @@
 #!/usr/bin/python3
-"""
-Rectangle Module
-
-"""
+"""Rectangle module"""
 
 
 class Rectangle:
-
-    """"Rectangle Class"""
+    """Rectangle class"""
 
     number_of_instances = 0
-    print_symbol = "#"@staticmethod
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize"""
-
-        if type(width) is not int:
+        if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
-
-        if type(height) is not int:
+        if not isinstance(height, int):
             raise TypeError("height must be an integer")
         if height < 0:
             raise ValueError("height must be >= 0")
-
         self.__width = width
         self.__height = height
-
         Rectangle.number_of_instances += 1
-
-    @property
-    def width(self):
-        """retrieve width"""
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        """setter width"""
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
-        else:
-            self.__width = value
-
-    @property
-    def height(self):
-        """retrieve height"""
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        """setter height"""
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
-        else:
-            self.__height = value
-
-    def area(self):
-        return self.__height * self.__width
-
-    def perimeter(self):
-        if self.__height == 0 or self.__width == 0:
-            return (0)
-        else:
-            return (self.__height + self.__width)*2
 
     def __str__(self):
         """Return an unofficial string"""
@@ -85,6 +38,44 @@ class Rectangle:
         """Delete a Rectangle"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
+    @property
+    def width(self):
+        """Get the width"""
+        return self.__width
+
+    @width.setter
+    def width(self, width):
+        """Set the width"""
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = width
+
+    @property
+    def height(self):
+        """Get the height"""
+        return self.__height
+
+    @height.setter
+    def height(self, height):
+        """Set the height"""
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = height
+
+    def area(self):
+        """Return the area"""
+        return self.__height * self.__width
+
+    def perimeter(self):
+        """Return the perimeter"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return self.__width * 2 + self.__height * 2
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
