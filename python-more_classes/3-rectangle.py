@@ -25,13 +25,6 @@ class Rectangle:
         self.__width = width
         self.__height = height
 
-    def __str__(self):
-        s = ""
-        if self.__width == 0 or self.__height == 0:
-            return s
-        s = ('#' * self.__width + '\n') * self.__height
-        return s[:-1]
-
     @property
     def width(self):
         """retrieve width"""
@@ -70,3 +63,10 @@ class Rectangle:
             return (0)
         else:
             return (self.__height + self.__width)*2
+
+    def __str__(self):
+        s = ""
+        if self.__width == 0 or self.__height == 0:
+            return s
+        s = ('#' * self.__width + '\n') * self.__height
+        return s[:-1]
