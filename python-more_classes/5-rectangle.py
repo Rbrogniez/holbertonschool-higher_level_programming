@@ -78,4 +78,3 @@ class Rectangle:
     def __del__(self):
         """Delete a Rectangle"""
         print("Bye rectangle...")
-
