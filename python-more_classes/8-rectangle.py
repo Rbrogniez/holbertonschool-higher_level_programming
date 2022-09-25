@@ -1,13 +1,16 @@
 #!/usr/bin/python3
-"""Rectangle Module"""
+"""
+Rectangle Module
+
+"""
 
 
 class Rectangle:
+
     """"Rectangle Class"""
 
     number_of_instances = 0
     print_symbol = "#"@staticmethod
-
 
     def __init__(self, width=0, height=0):
         """Initialize"""
@@ -67,6 +70,7 @@ class Rectangle:
             return (self.__height + self.__width)*2
 
     def __str__(self):
+        """Return an unofficial string"""
         s = ""
         if self.__width == 0 or self.__height == 0:
             return s

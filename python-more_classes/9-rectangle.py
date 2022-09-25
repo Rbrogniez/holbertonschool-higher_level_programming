@@ -70,6 +70,7 @@ class Rectangle:
             return (self.__height + self.__width)*2
 
     def __str__(self):
+        """Return an unofficial string"""
         s = ""
         if self.__width == 0 or self.__height == 0:
             return s
