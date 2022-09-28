@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-"""
-Module inherts from
-"""
+"""Module inherits from"""
 
 
-def is_kind_of_class(obj, a_class):
+def inherits_from(obj, a_class):
     """returns True if the object is an instance of a class
-    that inherited from the specified clas"""
+    that inherited from the specified class"""
     if issubclass(obj, a_class):
         return (True)
     else:
