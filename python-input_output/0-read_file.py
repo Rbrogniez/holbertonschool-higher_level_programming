@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Module Read file
-"""
+"""Module Read file"""
 
 
 def read_file(filename=""):
