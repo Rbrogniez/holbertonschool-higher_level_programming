@@ -23,4 +23,5 @@ def __init__(self, id=None):
         self.__id = id
     else:
         self.__nb_objects += 1
+        self.id = id
 
