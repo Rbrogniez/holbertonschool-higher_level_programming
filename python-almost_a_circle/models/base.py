@@ -5,7 +5,9 @@ Module Base Classe
 
 
 class Base:
-
+    """
+    Base class
+    """
     __nb_objects = 0
 
 
