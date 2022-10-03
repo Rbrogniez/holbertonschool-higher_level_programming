@@ -10,6 +10,16 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """inizializes a Rectangle"""
 
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be >= 0")
+
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be >= 0")
+
         self.width = width
         self.height = height
         self.x = x
