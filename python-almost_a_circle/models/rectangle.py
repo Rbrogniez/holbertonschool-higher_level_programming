@@ -93,6 +93,7 @@ class Rectangle(Base):
         return f'[Rectangle] ({self.id}) {self.x}/{self.y} - {self.__width}/{self.__height}'
 
     def update(self, *args):
+        """update the rectangle"""
 
         if len(args) >= 1:
             self.id = args[0]
