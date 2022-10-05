@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Module Square"""
-from ctypes import sizeof
-from re import S
+
 from models.rectangle import Rectangle
 
 
