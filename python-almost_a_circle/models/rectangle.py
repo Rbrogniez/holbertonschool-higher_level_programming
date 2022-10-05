@@ -94,6 +94,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """update the rectangle"""
+
         if len(args) == 0:
             for key, value in kwargs.items():
                  setattr(self, key, value)
