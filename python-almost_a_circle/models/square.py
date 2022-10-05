@@ -38,3 +38,8 @@ class Square(Rectangle):
             self.x = args[2]
         if len(args) >= 4:
             self.y = args[3]
+
+    def to_dictionary(self):
+        """Convert to dictionary"""
+        {'x' : self.x, 'y' : self.y, 'id' : self.id, 'height' : self.height,
+        'width' : self.width}

@@ -97,7 +97,7 @@ class Rectangle(Base):
 
         if len(args) == 0:
             for key, value in kwargs.items():
-                 setattr(self, key, value)
+                setattr(self, key, value)
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
@@ -109,8 +109,7 @@ class Rectangle(Base):
         if len(args) >= 5:
             self.y = args[4]
 
-
-
-
-
-
+    def to_dictionary(self):
+        """Convert to dictionary"""
+        {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height,
+        'width': self.width}
