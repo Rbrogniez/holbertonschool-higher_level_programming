@@ -25,6 +25,8 @@ class Square(Rectangle):
         self.height = size
 
     def update(self, *args, **kwargs):
+        """Update the square"""
+
         if len(args) == 0:
             for key, value in kwargs.items():
                  setattr(self, key, value)
