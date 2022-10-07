@@ -37,13 +37,3 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
-    @staticmethod
-    def to_json_string(json_string):
-        """
-        that returns the list of the JSON string representation json_string
-        """
-        if json_string is None or len(json_string) == 0:
-            return []
-        else:
-            return json.loads(json_string)
-
