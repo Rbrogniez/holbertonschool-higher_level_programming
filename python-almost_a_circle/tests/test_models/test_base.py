@@ -42,5 +42,6 @@ class TestBase(unittest.TestCase):
             Base.to_json_string([{1, 2}], [{3, 4}])
         self.assertEqual(err, str(i.exception))
 
+
 if __name__ == "__main__":
     unittest.main()
