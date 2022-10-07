@@ -4,9 +4,7 @@ import unittest
 from unittest import mock
 import io
 from models.square import Square
-from models.base import Base
-import os
-import json
+
 
 
 class TestSquare(unittest.TestCase):
@@ -86,7 +84,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1.id, 89)
         self.assertEqual(s1.x, 2)
 
-    
+
     def test_to_dictionary(self):
         """
         Test of to_dictionary() in Square exists

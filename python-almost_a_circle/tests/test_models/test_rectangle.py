@@ -4,9 +4,7 @@ import unittest
 from unittest import mock
 import io
 from models.rectangle import Rectangle
-import json
-import os
-
+from models.base import Base
 
 class TestRectangle(unittest.TestCase):
     "Unit test suite for Rectangle class"
@@ -77,7 +75,8 @@ class TestRectangle(unittest.TestCase):
         "Tests to_dictionary() method"
         s1 = Rectangle(10, 2, 1, 9)
         s1_dict = s1.to_dictionary()
-        self.assertEqual(s1_dict, {'x': 1, 'y': 9, 'id': 3,
+        Base._Base__nb_objects = 0
+        self.assertEqual(s1_dict, {'x': 1, 'y': 9, 'id': 2,
                                    'height': 2, 'width': 10})
 
     def test_update(self):
