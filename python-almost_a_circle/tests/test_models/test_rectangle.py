@@ -8,6 +8,9 @@ from models.base import Base
 
 class TestRectangle(unittest.TestCase):
     "Unit test suite for Rectangle class"
+    @classmethod
+    def setUpClass(cls):
+        Base.__nb_objects = 0;
 
     def test_init(self):
         "Test of Rectangle for width/height and default initialization"
@@ -73,10 +76,9 @@ class TestRectangle(unittest.TestCase):
 
     def test_dictionary(self):
         "Tests to_dictionary() method"
-        s1 = Rectangle(10, 2, 1, 9)
+        s1 = Rectangle(10, 2, 1, 9, 3)
         s1_dict = s1.to_dictionary()
-        Base._Base__nb_objects = 0
-        self.assertEqual(s1_dict, {'x': 1, 'y': 9, 'id': 2,
+        self.assertEqual(s1_dict, {'x': 1, 'y': 9, 'id': 3,
                                    'height': 2, 'width': 10})
 
     def test_update(self):
