@@ -6,11 +6,13 @@ import io
 from models.rectangle import Rectangle
 from models.base import Base
 
+
 class TestRectangle(unittest.TestCase):
     "Unit test suite for Rectangle class"
+
     @classmethod
     def setUpClass(cls):
-        Base.__nb_objects = 0;
+        Base.__nb_objects = 0
 
     def test_init(self):
         "Test of Rectangle for width/height and default initialization"
@@ -90,6 +92,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.height, 2)
         self.assertEqual(r.x, 3)
         self.assertEqual(r.y, 4)
+
 
 if __name__ == "__main__":
     unittest.main()

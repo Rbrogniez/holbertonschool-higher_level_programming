@@ -6,7 +6,6 @@ import io
 from models.square import Square
 
 
-
 class TestSquare(unittest.TestCase):
     """Testing Square"""
 
@@ -78,12 +77,10 @@ class TestSquare(unittest.TestCase):
         s1 = Square(2)
         s1.update(10)
         self.assertEqual(s1.id, 10)
-
         s1.update(size=1, id=89, x=2)
         self.assertEqual(s1.size, 1)
         self.assertEqual(s1.id, 89)
         self.assertEqual(s1.x, 2)
-
 
     def test_to_dictionary(self):
         """
