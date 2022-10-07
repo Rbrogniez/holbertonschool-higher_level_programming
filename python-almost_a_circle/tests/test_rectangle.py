@@ -77,7 +77,7 @@ class TestRectangle(unittest.TestCase):
         "Tests to_dictionary() method"
         s1 = Rectangle(10, 2, 1, 9)
         s1_dict = s1.to_dictionary()
-        self.assertEqual(s1_dict, {'x': 1, 'y': 9, 'id': 9,
+        self.assertEqual(s1_dict, {'x': 1, 'y': 9, 'id': 3,
                                    'height': 2, 'width': 10})
 
     def test_update(self):
@@ -89,15 +89,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.height, 2)
         self.assertEqual(r.x, 3)
         self.assertEqual(r.y, 4)
-
-    
-
-    def test_save_empty_list(self):
-        """test  empty list"""
-        Rectangle.save_to_file([])
-        with open("Rectangle.json", "r") as fileempty:
-            self.assertEqual("[]", fileempty.read())
-
 
 if __name__ == "__main__":
     unittest.main()

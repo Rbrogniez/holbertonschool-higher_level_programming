@@ -86,26 +86,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1.id, 89)
         self.assertEqual(s1.x, 2)
 
-    def test_created(self):
-        """Test of Square.create(**{ 'id': 89 }) in Square exists"""
-        s = Square.create(**{'id': 89})
-        self.assertEqual(s.id, 89)
-
-        s = Square.create(**{'id': 89, 'size': 1})
-        self.assertEqual(s.id, 89)
-        self.assertEqual(s.size, 1)
-
-        s = Square.create(**{'id': 89, 'size': 1, 'x': 2})
-        self.assertEqual(s.id, 89)
-        self.assertEqual(s.size, 1)
-        self.assertEqual(s.x, 2)
-
-        s = Square.create(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
-        self.assertEqual(s.id, 89)
-        self.assertEqual(s.size, 1)
-        self.assertEqual(s.x, 2)
-        self.assertEqual(s.y, 3)
-
+    
     def test_to_dictionary(self):
         """
         Test of to_dictionary() in Square exists
@@ -113,27 +94,6 @@ class TestSquare(unittest.TestCase):
         dict = {'id': 7, 'size': 10, 'x': 9, 'y': 8}
         s = Square(10, 9, 8, 7)
         self.assertEqual(dict, s.to_dictionary())
-
-    def test_save_to_file_none(self):
-        """Test that `save_to_file()` instance used to directly
-        serialize and write to file and delete the file
-        """
-        Base._Base__nb_object = 0
-        s1 = Square(9, 2, 7)
-        s2 = Square(2)
-        Square.save_to_file(None)
-        self.assertIs(os.path.exists("Square.json"), True)
-        with open("Square.json", 'r') as file:
-            self.assertEqual(json.loads(file.read()), json.loads('[]'))
-        os.remove("Square.json")
-
-    def test_save_empty_list(self):
-        """test empty list"""
-        Base._Base__nb_object = 0
-        Square.save_to_file([])
-        with open("Square.json", "r") as file2:
-            self.assertEqual("[]", file2.read())
-        os.remove("Square.json")
 
 
 if __name__ == "__main__":
