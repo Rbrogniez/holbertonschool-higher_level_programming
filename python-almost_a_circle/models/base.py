@@ -40,10 +40,10 @@ class Base:
     @staticmethod
     def to_json_string(json_string):
         """
-        Convert a list of dictionaries to a JSON string
+        that returns the list of the JSON string representation json_string
         """
         if json_string is None or len(json_string) == 0:
-            return "[]"
+            return []
         else:
-            return json.load(json_string)
+            return json.loads(json_string)
 
