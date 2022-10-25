@@ -20,4 +20,4 @@ def pascal_triangle(n):
         new_line.append(1)
         pascal.append(new_line)
 
-    return
+    return pascal
