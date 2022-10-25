@@ -14,3 +14,4 @@ if argc > 1:
     for i in range(1, argc):
         items.append(argv[i])
 save_to_json_file(items, "add_item.json")
+
