@@ -9,7 +9,7 @@ INSERT INTO second_table(
 	id,
 	name,
 	score
-);
+)
 
 VALUES
 (1,John,10),
