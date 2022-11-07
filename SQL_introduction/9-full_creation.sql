@@ -6,10 +6,10 @@ CREAT TABLE IF NOT EXISTS 'second_table'(
 );
 
 INSERT INTO second_table(
-	id,
+	'id',
 	name,
-	score
-)
+	'score',
+);
 
 VALUES
 (1,John,10),
